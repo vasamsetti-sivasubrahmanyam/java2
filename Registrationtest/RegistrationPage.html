@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>RegistrationPage</title>
+</head>
+<body bgcolor="tomato" >
+<div align="center">
+<script type="text/javascript">
+		function validateEmail() {
+			
+			var email=document.myform.email.value;
+			
+			
+				 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+				  {
+					 var phone = document.forms["myform"]["number"].value;
+				        var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+				            if(phone.match(phoneNum)) {
+				                return true;
+				            }
+							else
+							{
+							alert("Enter valid number");
+							return false;
+							}
+				  
+				   }
+				   else
+				   {
+				   alert("Invalid email entered");
+				   return (false);
+				   }
+  }	
+	</script>
+	<h1 sytle="color:white">Registration Page</h1>
+	<table>
+	<form method="post" action"D:\JavaWorkspaceSTS\Registrationtest\ProjectDetails.htm" onsubmit="return validateEmail()">
+	<tr>
+	<td>First Name:</td>
+	<td><input id="fname" type="text" style="color:DodgerBlue;" size"30"/></td>
+	</tr>
+	<tr>
+	<td>Last Name:</td>
+	<td><input id="lname" type="text" style="color:DodgerBlue;" size"30"/></td>
+	</tr>
+	<tr>
+	<td>Email:</td>
+	<td><input id="email" type="email" style="color:DodgerBlue;" size"30"/></td>
+	</tr>
+	<tr>
+	<td>Contact:</td>
+	<td><input id="contact" type="text" style="color:DodgerBlue;" size"10"/></td>
+	</tr>
+	<tr>
+	<td>Address:</td>
+	<td><input id="address" type="text" style="color:DodgerBlue;" size"30"/></td>
+	</tr>
+	<tr>
+	<td>City:</td>
+	<td><input id="city" type="text" style="color:DodgerBlue;" size"30"/></td>
+	</tr>
+	<tr>
+	<td>State:</td>
+	<td><select id="select">
+  	<option value="AndhraPradesh">AndhraPradesh</option>
+  	<option value="Telangana">Telangana</option>
+  	<option value="Maharastra">Maharastra</option>
+  	<option value="TamilNadu">TamilNadu</option>
+  	<option value="Karnataka">Karnataka</option>
+  	<option value="Kerala">Kerala</option>
+  	<option value="Orissa">Orissa</option>
+	</select>
+	</td>
+	</tr>
+	<tr>
+	<td><input type="submit" id="submit" value="Proceed" size="20"/></td>
+	</tr>
+	</form>
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+.table2{background-color:MistyRose;}
+</style>
+<script type="text/javascript">
+
+function success()
+{
+	
+return alert("Successfully Registered");	
+
+}
+
+</script>
+
+<title>ProjectDetails</title>
+</head>
+<body bgcolor="teal">
+
+<div align="center">
+<font size="5">ProjectDetails</font>
+<form name="form2" onsubmit="return success()" >
+<table class="table2">
+
+<tr><td>ProjectName:</td><td> <input type="text" name="pname" id="projectname" required="required"/> </td></tr>
+<tr><td>ClientName:</td><td> <input type="text" name="cname" id="clientname" required="required"/> </td></tr>
+<tr><td>TeamSize:</td><td> <input type="text"  name="tsize" id="teamsize" pattern="[1-9]" title="Enter number" required="required"/> </td></tr>
+<tr><td><input type="submit" name="submit1" id="submit1" value="Register"/> </td></tr>
+
+
+</table>
+</form>
+</div>
+</body>
+</html>
